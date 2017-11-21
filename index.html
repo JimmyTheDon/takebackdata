@@ -1,13 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Search For Patience</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/style.css" type="text/css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <title>Taking Back Data</title>
+  <link rel="icon" type="image" href="assets/logo.png">
+  <meta charset="utf-8" />
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <link rel="stylesheet" href="css/base.css" type="text/css"/>
+  <link rel="stylesheet" href="css/style.css" type="text/css"/>
+  <link rel="preload" href="js/index.js" as="script">
+  <link rel="preload" href="js/index2.js" as="script">
 </head>
 
 <body>
-  <h1>Hello World</h1>
+  <div class="section" id="section1">
+    <div id="initial-loader" class="padded"><span id="loader-text"></span></div>
+    <a href="#section2"><canvas class="p-canvas-webgl parallax" id="canvas-webgl"></canvas></a>
+    <div id="main-body">
+      <section id="page-structure" class="ajax">
+        <header class="eliza height-95">
+          <nav class="padded">
+            <a href="index.html" target="_blank"><img src="assets/logo.svg" id="nclud-logo"></a>
+          </nav>
+          <div class="header-text grid_row padded-horizontal">
+            <h2 class="grid2">Welcome to <span id="siteName">Taking Back Data</span>, a site that provides resources to reclaim one's security and privacy in the digital landscape.</h2>
+            <h1 class="grid3">Security and Privacy are Rights.</h1>
+          </div>
+          <div id="canvas">
+          </div>
+        </header>
+      </section>
+    </div>
+  </div>
+  <div class="section" id="section2">
+    <div class="sec_content grid_row padded">
+      <h2 class="sec_head grid3">Learn more about
+        <span class="typewrite" data-period="2000" data-type='[ "data-mining.", "the Internet of Things.", "cybersecurity." ]'>
+          <span class="wrap"></span>
+        </span>
+      </h2>
+    </div>
+    <div class="picture-grid_row padded">
+      <div class="picture-grid1" id="img_left">
+        <a href="https://irlpodcast.org/"><img src="assets/img/irl.png"></a>
+        <br><br><br>
+        <p><strong>IRL</strong> is a recent podcast created by Mozilla, and hosted by Jessica Belmont. The podcast looks at our relationship with the Internet, the future of the Web, and the various subject matter that revolves around it&#8212;from free speech and trolls to ransomeware and surveillance. Below are some specific episodes selected that delves into the topic of data mining surveillance, and net neutrality</p>
+      </div>
+      <div class="picture-grid1" id="img_center">
+        <a href="https://hackablepodcast.com/"><img src="assets/img/hackable.jpg"></a>
+        <br><br><br>
+        <p><strong>Hackable?</strong> is another recent podcast create by McAfee, and is hosted by Geoff Siskind and Bruce Snell. The podcast takes a look into the world of cybersecurity and cybercrime that is relatable to the everday person. It focuses on how susceptible the average daily routine can be, and brings to light the vulnerabilities of IoT devices in the every growing world of connectivity. Below are all the episodes to date.</p>
+      </div>
+      <div class="picture-grid1" id="img_right">
+        <a href="https://gimletmedia.com/reply-all/"><img src="assets/img/replyall.jpg"></a>
+        <br><br><br>
+        <p><strong>Reply All</strong> is an ongoing podcast that began in 2014, and is hosted by PJ Vogt and Alex Goldman. It is a podcast about the general Internet, and various topics that wraps around it. The stories are generally more human focused and less about tech. Below are a few episodes picked out on the topic of data mining and data brokering. Enjoy!</p>
+      </div>
+    </div>
+    <div class="picture-grid_row padded">
+      <iframe class="picture-grid1" id="img_left" src="https://open.spotify.com/embed/user/1219865120/playlist/5EsddrmIYcUSok6njBx8rB" width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>
+      <iframe class="picture-grid1" id="img_center" src="https://open.spotify.com/embed/user/1219865120/playlist/6J0yci6TCOt8T0yYD3tuzL" width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>
+      <iframe class="picture-grid1" id="img_right" src="https://open.spotify.com/embed/user/1219865120/playlist/7fnGTeARxVHxVruxcaw3RI" width="100%" height="380" frameborder="0" allowtransparency="true"></iframe>
+    </div>
+  </div>
+  <div class="section" id="section3">
+    <div class="sec_content padded" style="top: 30px;">
+      <h2 class="sec_head grid3">Defend yourself against data-mining and tracking.</h2>
+      <p class="grid2">The Electronic Frontier Foundation or EFF has created this lengthy <a href="https://ssd.eff.org/en">surveillance self defense guide</a> that covers a variety of ways one can maintain their privacy and anonymity, and these instructions range from beginner to advance. There is also this <a href="https://medium.com/the-intercept/surveillance-self-defense-for-journalists-ce627e332db6">checklist</a> to help get started.</p>
+      <img class="grid1" src="https://ssd.eff.org/sites/all/themes/ssd/logo.png" alt="">
+    </div>
+  </div>
+  <div id="section4" style="height: 30vh !important;">
+    <div class="sec_content padded">
+      <h2 class="sec_head">Help
+        <span class="typewrite" data-period="2000" data-type='[ "spread the word.", "create conversation and dialogue.", "form regulations.", "secure and protect digital privacy." ]'>
+          <span class="wrap"></span>
+        </span>
+      </h2>
+      <br>
+      <h2><span id="siteName">Share</span></h2>
+      <br><br><br>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/three.js/r70/three.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-18/CopyShader.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/141552/03_glitch.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-18/EffectComposer.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-18/RenderPass.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-18/ShaderPass.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-18/MaskPass.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/141552/08_texturepass.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-18/GlitchPass.js'></script>
+  <script  src="js/index.js"></script>
+  <script  src="js/index2.js"></script>
+  <script  src="js/script.js"></script>
+  <script  src="js/typewriter.js"></script>
 </body>
 </html>
